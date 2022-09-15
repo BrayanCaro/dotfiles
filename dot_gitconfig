@@ -3,9 +3,8 @@
 	name = Brayan Martínez Santana
 [alias]
 	s = status -s
-	l = log --relative-date --format=reference --graph
-	ll = log --relative-date --format=reference --graph --all
-	l = log --relative-date --format=reference --graph
+	l = log --graph
+	ll = log --graph --all
 [init]
 	defaultBranch = main
 [pretty]
