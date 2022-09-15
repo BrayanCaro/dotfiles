@@ -38,14 +38,15 @@ call plug#begin()
     Plug 'junegunn/fzf.vim'
     Plug 'vim-scripts/AutoClose'
     Plug 'rakr/vim-one'
+    Plug 'lilydjwg/colorizer'
 call plug#end()
 
- let g:terminal_ansi_colors = [
-        \ '#4e4e4e', '#d68787', '#5f865f', '#d8af5f',
-        \ '#85add4', '#d7afaf', '#87afaf', '#d0d0d0',
-        \ '#626262', '#d75f87', '#87af87', '#ffd787',
-        \ '#add4fb', '#ffafaf', '#87d7d7', '#e4e4e4'
-      \ ]
+let g:terminal_ansi_colors = [
+       \ '#4e4e4e', '#d68787', '#98c379', '#d8af5f',
+       \ '#61afef', '#c678dd', '#56b6c2', '#d0d0d0',
+       \ '#626262', '#d75f87', '#87af87', '#ffd787',
+       \ '#add4fb', '#ffafaf', '#87d7d7', '#e4e4e4'
+\ ]
 
 
 "Credit joshdick
@@ -65,6 +66,7 @@ if (empty($TMUX))
   endif
 endif
 
+let g:one_allow_italics = 1
 colorscheme one
 
 " done
@@ -92,33 +94,33 @@ nnoremap <leader>o :NERDTreeFind<CR>
 
 " coc.nvim
 
-  function! s:check_back_space() abort
-    let col = col('.') - 1
-    return !col || getline('.')[col - 1]  =~ '\s'
-  endfunction
+function! s:check_back_space() abort
+  let col = col('.') - 1
+  return !col || getline('.')[col - 1]  =~ '\s'
+endfunction
 
-  " Insert <tab> when previous text is space, refresh completion if not.
-  inoremap <silent><expr> <TAB>
-	\ coc#pum#visible() ? coc#pum#next(1):
-	\ <SID>check_back_space() ? "\<Tab>" :
-	\ coc#refresh()
-  inoremap <expr><S-TAB> coc#pum#visible() ? coc#pum#prev(1) : "\<C-h>"
+" Insert <tab> when previous text is space, refresh completion if not.
+inoremap <silent><expr> <TAB>
+  \ coc#pum#visible() ? coc#pum#next(1):
+  \ <SID>check_back_space() ? "\<Tab>" :
+  \ coc#refresh()
+inoremap <expr><S-TAB> coc#pum#visible() ? coc#pum#prev(1) : "\<C-h>"
 
-  if has('nvim')
-    inoremap <silent><expr> <c-space> coc#refresh()
-  else
-    inoremap <silent><expr> <c-@> coc#refresh()
-  endif
+if has('nvim')
+  inoremap <silent><expr> <c-space> coc#refresh()
+else
+  inoremap <silent><expr> <c-@> coc#refresh()
+endif
 
 " <CR> to confirm completion, use: >
-  inoremap <expr> <cr> coc#pum#visible() ? coc#_select_confirm() : "\<CR>"
+inoremap <expr> <cr> coc#pum#visible() ? coc#_select_confirm() : "\<CR>"
 
 
 " To make <CR> to confirm selection of selected complete item or notify coc.nvim
 " to format on enter, use: >
 
-  inoremap <silent><expr> <CR> coc#pum#visible() ? coc#_select_confirm()
-				\: "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
+inoremap <silent><expr> <CR> coc#pum#visible() ? coc#_select_confirm()
+              \: "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
 
 " Use `[g` and `]g` to navigate diagnostics
 " Use `:CocDiagnostics` to get all diagnostics of current buffer in location list.
