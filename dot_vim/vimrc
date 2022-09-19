@@ -39,7 +39,13 @@ call plug#begin()
     Plug 'vim-scripts/AutoClose'
     Plug 'rakr/vim-one'
     Plug 'lilydjwg/colorizer'
+    Plug 'vim-vdebug/vdebug'
 call plug#end()
+
+if !exists('g:vdebug_options')
+  let g:vdebug_options = {}
+endif
+let g:vdebug_options.port = 9003
 
 let g:terminal_ansi_colors = [
        \ '#4e4e4e', '#d68787', '#98c379', '#d8af5f',
