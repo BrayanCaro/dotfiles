@@ -8,6 +8,6 @@
 [init]
 	defaultBranch = main
 [pretty]
-	slim = %C(auto)%h %C(blue)%>(12)%cr%C(auto) %d %s
+	slim = %C(auto)%h %C(blue)%>(14)%cr%C(auto) %d %s
 [format]
 	pretty = slim
