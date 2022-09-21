@@ -11,3 +11,8 @@
 	slim = %C(auto)%h %C(blue)%>(14)%cr%C(auto) %d %s
 [format]
 	pretty = slim
+[merge]
+	tool = vimdiff
+[mergeTool]
+	keepTemporaries = false
+	keepBackup = false
