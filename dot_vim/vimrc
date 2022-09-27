@@ -36,7 +36,7 @@ call plug#begin()
     Plug 'neoclide/coc.nvim', {'branch': 'release'}
     Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
     Plug 'junegunn/fzf.vim'
-    Plug 'vim-scripts/AutoClose'
+    Plug 'Raimondi/delimitMate'
     Plug 'rakr/vim-one'
     Plug 'lilydjwg/colorizer'
     Plug 'vim-vdebug/vdebug'
@@ -74,9 +74,6 @@ endif
 
 let g:one_allow_italics = 1
 colorscheme one
-
-" done
-nnoremap 'a <Plug>ToggleAutoCloseMappings
 
 " FZF
 let $FZF_DEFAULT_COMMAND = 'find .'
