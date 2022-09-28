@@ -125,3 +125,8 @@ fi
 
 # enable reverse search back & forth
 stty -ixon
+
+# Custom completions:
+if [ -f ~/.config/bash/completions/chezmoi.bash ]; then
+    . ~/.config/bash/completions/chezmoi.bash
+fi
