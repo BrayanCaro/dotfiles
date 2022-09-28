@@ -87,6 +87,8 @@ nnoremap <leader>s :GFiles?<CR>
 vmap 'f  <Plug>(coc-format-selected)
 nmap 'f  <Plug>(coc-format)
 
+xnoremap <leader>p "_dP
+
 " Symbol renaming.
 nmap <leader>rn <Plug>(coc-rename)
 
