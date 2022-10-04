@@ -6,8 +6,8 @@ set hidden
 " Smart case searc
 set ignorecase smartcase
 
-se rnu nu
-se sc
+set relativenumber number
+set showcmd
 
 "" set tab width to be 4 spaces
 set tabstop=4
@@ -16,11 +16,10 @@ set shiftwidth=4
 " Insert 4 spaces when pressing tab instead of the tab character
 set expandtab
 
-se lcs=tab:<->
+set listchars=tab:<->
 
-se exrc
-se secure
-
+set exrc
+set secure
 
 let data_dir = has('nvim') ? stdpath('data') . '/site' : '~/.vim'
 if empty(glob(data_dir . '/autoload/plug.vim'))
@@ -29,7 +28,6 @@ if empty(glob(data_dir . '/autoload/plug.vim'))
 endif
 
 call plug#begin()
-    Plug 'StanAngeloff/php.vim'
     Plug 'sheerun/vim-polyglot'
     Plug 'preservim/nerdtree'
     Plug 'neoclide/coc.nvim', {'branch': 'release'}
@@ -37,7 +35,6 @@ call plug#begin()
     Plug 'junegunn/fzf.vim'
     Plug 'Raimondi/delimitMate'
     Plug 'rakr/vim-one'
-    Plug 'lilydjwg/colorizer'
     Plug 'vim-vdebug/vdebug'
 call plug#end()
 
