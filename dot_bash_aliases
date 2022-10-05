@@ -1,1 +1,2 @@
 alias artisan='[ -f artisan ] && php artisan'
+alias v=vim
