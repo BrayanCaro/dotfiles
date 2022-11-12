@@ -75,6 +75,8 @@ colorscheme one
 
 highlight default link DbgCurrentLine Pmenu
 
+nnoremap <leader>c "+y
+
 " FZF
 let $FZF_DEFAULT_COMMAND = 'find .'
 nnoremap <leader>f :Files<CR>
