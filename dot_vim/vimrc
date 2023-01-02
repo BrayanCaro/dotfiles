@@ -152,6 +152,9 @@ function! ShowDocumentation()
   endif
 endfunction
 
+" Signature help
+inoremap <C-P> <C-\><C-O>:call CocActionAsync('showSignatureHelp')<cr>
+
 " Trim white space
 fun! TrimWhitespace()
     let l:save = winsaveview()
