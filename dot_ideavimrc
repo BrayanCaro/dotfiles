@@ -16,6 +16,7 @@ map Q gq
 
 set visualbell
 set noerrorbells
+set ideajoin
 
 set rnu nu
 
@@ -40,10 +41,11 @@ map <leader>g <Action>(GotoFile)
 "   v - visual and select modes
 "   a - all modes
 
-sethandler <C-c> n:vim
 sethandler <C-g> n:vim
 sethandler <C-n> n:ide
-sethandler <C-c> n-i:vim x-v:ide
+sethandler <C-c> a:ide
+sethandler <C-v> a:ide
+sethandler <C-w> a:ide
 
 " Plugins
 set NERDTree
