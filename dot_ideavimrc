@@ -1,0 +1,49 @@
+"" Source your .vimrc
+source ~/.vimrc
+
+let mapleader=" "
+
+"" -- Suggested options --
+" Show a few lines of context around the cursor. Note that this makes the
+" text scroll if you mouse-click near the start or end of the window.
+set scrolloff=5
+
+" Do incremental searching.
+set incsearch
+
+" Don't use Ex mode, use Q for formatting.
+map Q gq
+
+set visualbell
+set noerrorbells
+
+set rnu nu
+
+"" -- Map IDE actions to IdeaVim -- https://jb.gg/abva4t
+"" Map \r to the Reformat Code action
+map <leader>g <Action>(GotoFile)
+"map \r <Action>(ReformatCode)
+
+"" Map <leader>d to start debug
+"map <leader>d <Action>(Debug)
+
+"" Map \b to toggle the breakpoint on the current line
+"map \b <Action>(ToggleLineBreakpoint)
+
+
+" Find more examples here: https://jb.gg/share-ideavimrc
+
+" Handlers, values:
+"   n - normal mode
+"   i - insert mode
+"   x - visual mode
+"   v - visual and select modes
+"   a - all modes
+
+sethandler <C-c> n:vim
+sethandler <C-g> n:vim
+sethandler <C-n> n:ide
+sethandler <C-c> n-i:vim x-v:ide
+
+" Plugins
+set NERDTree
