@@ -41,6 +41,7 @@ call plug#begin()
     Plug 'junegunn/fzf.vim'
     Plug 'Raimondi/delimitMate'
     Plug 'rakr/vim-one'
+    Plug 'kshenoy/vim-signature'
     Plug 'vim-vdebug/vdebug'
 call plug#end()
 
