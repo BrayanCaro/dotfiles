@@ -8,7 +8,7 @@
 [init]
 	defaultBranch = main
 [pretty]
-	slim = "%C(auto)%h %C(#abb2bf)%cr %C(#c6afef)%al%C(auto)%d %s"
+	slim = "%C(auto)%h %C(#abb2bf)%cr %C(#c6afef)%an%C(auto)%d %s"
 [format]
 	pretty = slim
 [merge]
