@@ -1,18 +1,45 @@
+[core]
+    pager = delta
+
+[interactive]
+    diffFilter = delta --color-only --features=interactive
+
+[delta]
+    features = decorations
+    side-by-side = true
+
+[delta "interactive"]
+    keep-plus-minus-markers = false
+
+[delta "decorations"]
+    commit-decoration-style = blue ol
+    commit-style = raw
+    file-style = omit
+    hunk-header-decoration-style = blue box
+    hunk-header-file-style = red
+    hunk-header-line-number-style = "#067a00"
+    hunk-header-style = file line-number syntax
+
 [user]
 	email = brayanmtz@ciencias.unam.mx
 	name = Brayan Martínez Santana
+
 [alias]
 	s = status -s
 	l = log --graph
 	ll = log --graph --all
+
 [init]
 	defaultBranch = main
+
 [pretty]
 	slim = "%C(auto)%h %C(#abb2bf)%cr %C(#c6afef)%an%C(auto)%d %s"
 [format]
 	pretty = slim
+
 [merge]
 	tool = vimdiff
+
 [mergeTool]
 	keepTemporaries = false
 	keepBackup = false
