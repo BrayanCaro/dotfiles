@@ -46,6 +46,7 @@ sethandler <C-n> n:ide
 sethandler <C-c> a:ide
 sethandler <C-v> a:ide
 sethandler <C-w> a:ide
+sethandler <C-e> a:ide
 
 " Plugins
 set NERDTree
