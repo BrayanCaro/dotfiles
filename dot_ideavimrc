@@ -47,6 +47,9 @@ sethandler <C-c> a:ide
 sethandler <C-v> a:ide
 sethandler <C-w> a:ide
 sethandler <C-e> a:ide
+sethandler <C-o> n:vim
+sethandler <C-i> n:vim
+sethandler <C-Enter> a:ide
 
 " Plugins
 set NERDTree
