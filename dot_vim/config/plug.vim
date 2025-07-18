@@ -18,7 +18,10 @@ call plug#begin()
 
     Plug 'kshenoy/vim-signature'
 
-    Plug 'vim-vdebug/vdebug'
+
+    if has('python3')
+        Plug 'vim-vdebug/vdebug'
+    endif
 
     " color schema
     Plug 'NLKNguyen/papercolor-theme'
