@@ -1,3 +1,8 @@
-runtime config/init.vim
+" Main vim config file
 
+runtime general.vim
+runtime keybindings.vim
+runtime plugins.vim
 
+" Load all plugin configurations
+" runtime plugins/*.vim

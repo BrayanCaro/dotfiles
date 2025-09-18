@@ -27,3 +27,5 @@ call plug#begin()
     Plug 'NLKNguyen/papercolor-theme'
 call plug#end()
 
+colorscheme PaperColor
+
