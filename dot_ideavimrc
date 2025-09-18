@@ -30,6 +30,9 @@ map <leader>g <Action>(GotoFile)
 
 "" Map \b to toggle the breakpoint on the current line
 "map \b <Action>(ToggleLineBreakpoint)
+map gy <Action>(GotoTypeDeclaration)
+map gi <Action>(GotoImplementation)
+map gs <Action>(GotoSuperMethod)
 
 
 " Find more examples here: https://jb.gg/share-ideavimrc
