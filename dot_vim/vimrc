@@ -5,4 +5,4 @@ runtime keybindings.vim
 runtime plugins.vim
 
 " Load all plugin configurations
-" runtime plugins/*.vim
+runtime! plugins/*.vim
