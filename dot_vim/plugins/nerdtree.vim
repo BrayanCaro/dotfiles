@@ -1,8 +1,7 @@
 " ctr+n will open and close NERDTree
 nnoremap <C-N> :NERDTreeToggle<CR>
 
-" <leader> + o will open NERDTree in the file your editing
-nnoremap <leader>o :NERDTreeFind<CR>
+nnoremap <leader>i :NERDTreeFind<CR>
 
 augroup NERDTreeMappings
   autocmd!
