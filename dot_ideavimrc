@@ -10,6 +10,8 @@ set scrolloff=5
 
 " Do incremental searching.
 set incsearch
+set smartcase
+set ignorecase
 
 " Don't use Ex mode, use Q for formatting.
 map Q gq
@@ -20,22 +22,23 @@ set ideajoin
 
 set rnu nu
 
-"" -- Map IDE actions to IdeaVim -- https://jb.gg/abva4t
-"" Map \r to the Reformat Code action
-map <leader>g <Action>(GotoFile)
-"map \r <Action>(ReformatCode)
+nmap <leader>f <Action>(GotoFile)
+nmap <leader>' <Action>(ReformatCode)
+vmap ' <Action>(ReformatCode)
+nmap <leader>o <Action>(FileStructurePopup)
+nmap <leader>b <Action>(RecentFiles)
+nmap <leader>a <Action>(ShowIntentionActions)
+nmap <leader>i <Action>(Inline)
 
-"" Map <leader>d to start debug
-"map <leader>d <Action>(Debug)
+nmap <leader>v <Action>(IntroduceVariable)
+vmap v <Action>(IntroduceVariable)
+nmap <leader>n <Action>(RenameElement)
 
-"" Map \b to toggle the breakpoint on the current line
-"map \b <Action>(ToggleLineBreakpoint)
-map gy <Action>(GotoTypeDeclaration)
-map gi <Action>(GotoImplementation)
-map gs <Action>(GotoSuperMethod)
+nmap gr <Action>(ShowUsages)
+nmap gy <Action>(GotoTypeDeclaration)
+nmap gi <Action>(GotoImplementation)
+nmap gs <Action>(GotoSuperMethod)
 
-
-" Find more examples here: https://jb.gg/share-ideavimrc
 
 " Handlers, values:
 "   n - normal mode
