@@ -39,6 +39,8 @@ nmap gy <Action>(GotoTypeDeclaration)
 nmap gi <Action>(GotoImplementation)
 nmap gs <Action>(GotoSuperMethod)
 
+nmap <leader>f <Action>(PrevSplitter)
+nmap <leader>j <Action>(NextSplitter)
 
 " Handlers, values:
 "   n - normal mode
