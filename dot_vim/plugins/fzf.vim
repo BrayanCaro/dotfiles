@@ -35,5 +35,9 @@ def GetVisualSelectionOneLine(): string
   return txt
 enddef
 
-xnoremap <silent> <leader>v :<C-u>execute 'RG ' .. GetVisualSelectionOneLine()<CR>
+def RgFromVisual()
+  execute 'RG ' .. GetVisualSelectionOneLine()
+enddef
+
+xnoremap <silent> <leader>v <ScriptCmd>RgFromVisual()<CR>
 
