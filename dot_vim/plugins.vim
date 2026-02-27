@@ -23,9 +23,7 @@ call plug#begin()
         Plug 'vim-vdebug/vdebug'
     endif
 
-    " color schema
-    Plug 'NLKNguyen/papercolor-theme'
-call plug#end()
+    Plug 'sainnhe/gruvbox-material'
 
-colorscheme PaperColor
+call plug#end()
 
